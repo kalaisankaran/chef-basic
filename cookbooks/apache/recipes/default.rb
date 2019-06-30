@@ -26,3 +26,4 @@ end
  # subscribes
 #end
 
+include_recipe 'apache::rspec'

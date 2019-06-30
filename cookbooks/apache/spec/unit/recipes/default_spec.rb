@@ -24,6 +24,9 @@ describe 'apache::default' do
     it 'enables the apache service' do
         expect(chef_run).to enable_service('apache2')
     end
+    it 'remove tree' do
+	expect(chef_run).to remove_package('tree')
+    end
   end
 
   context 'When all attributes are default, on CentOS 7' do

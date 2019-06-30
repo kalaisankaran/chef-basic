@@ -1,5 +1,5 @@
 {
-  "revision_id": "0956851d1040800faec57140be6639c1fee8728e567bd11490810f46341f42d1",
+  "revision_id": "a1d4c5bca9ebd5b8ebfe5a2cba919a9a91c53a7f67df752ec99935911c241b53",
   "name": "apache",
   "run_list": [
     "recipe[apache::default]"
@@ -10,14 +10,14 @@
   "cookbook_locks": {
     "apache": {
       "version": "2.0.1",
-      "identifier": "9bbdfe74d8ad73978458b37e2d158f328ed3fb84",
-      "dotted_decimal_identifier": "43837521969851763.42648237986688277.157447307393924",
+      "identifier": "3a81075eddc6336738d2a0493967eb1916b97f77",
+      "dotted_decimal_identifier": "16467417305564723.29054399884638567.258492987965303",
       "source": ".",
       "cache_key": null,
       "scm_info": {
         "scm": "git",
         "remote": "https://github.com/trovsankar/chef-basic.git",
-        "revision": "b214f2135751fc380ffb7babdaf4188f78254ade",
+        "revision": "4c0c88c490d64fd49a52f085657c1e74dbec226e",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
