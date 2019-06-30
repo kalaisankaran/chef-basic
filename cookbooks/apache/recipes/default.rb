@@ -20,4 +20,9 @@ service 'apache2' do
 	action [:start, :enable]
 end
 
+#file "/var/www/html/index.html" do
+ # extend Apache::EnvironmentHelpers
+ # content environments_html_list
+ # subscribes
+#end
 
