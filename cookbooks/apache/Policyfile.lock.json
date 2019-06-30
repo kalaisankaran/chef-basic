@@ -17,7 +17,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "https://github.com/trovsankar/chef-basic.git",
-        "revision": "4c0c88c490d64fd49a52f085657c1e74dbec226e",
+        "revision": "df6c8c41bbcf22868a963706852780fc7ec8edc0",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [

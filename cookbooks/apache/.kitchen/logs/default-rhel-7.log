@@ -1,0 +1,85 @@
+I, [2019-06-30T08:26:48.531124 #2661]  INFO -- default-rhel-7: -----> Cleaning up any prior instances of <default-rhel-7>
+I, [2019-06-30T08:26:48.531295 #2661]  INFO -- default-rhel-7: -----> Destroying <default-rhel-7>...
+I, [2019-06-30T08:26:48.531856 #2661]  INFO -- default-rhel-7: Finished destroying <default-rhel-7> (0m0.00s).
+I, [2019-06-30T08:26:48.532013 #2661]  INFO -- default-rhel-7: -----> Testing <default-rhel-7>
+I, [2019-06-30T08:26:48.532076 #2661]  INFO -- default-rhel-7: -----> Creating <default-rhel-7>...
+I, [2019-06-30T08:26:48.579819 #2661]  INFO -- default-rhel-7: Sending build context to Docker daemon  101.9kB
+I, [2019-06-30T08:26:48.685741 #2661]  INFO -- default-rhel-7: Step 1/18 : FROM rhel:7
+I, [2019-06-30T08:26:49.601406 #2661]  INFO -- default-rhel-7: pull access denied for rhel, repository does not exist or may require 'docker login'
+E, [2019-06-30T08:26:49.614023 #2661] ERROR -- default-rhel-7: Create failed on instance <default-rhel-7>.
+E, [2019-06-30T08:26:49.614142 #2661] ERROR -- default-rhel-7: ------Exception-------
+E, [2019-06-30T08:26:49.614161 #2661] ERROR -- default-rhel-7: Class: Kitchen::ShellOut::ShellCommandFailed
+E, [2019-06-30T08:26:49.614171 #2661] ERROR -- default-rhel-7: Message: Expected process to exit with [0], but received '1'
+---- Begin output of docker -H unix:///var/run/docker.sock build -f Dockerfile-kitchen20190630-2661-xfpotz . ----
+STDOUT: Sending build context to Docker daemon  101.9kB
+Step 1/18 : FROM rhel:7
+STDERR: pull access denied for rhel, repository does not exist or may require 'docker login'
+---- End output of docker -H unix:///var/run/docker.sock build -f Dockerfile-kitchen20190630-2661-xfpotz . ----
+Ran docker -H unix:///var/run/docker.sock build -f Dockerfile-kitchen20190630-2661-xfpotz . returned 1
+E, [2019-06-30T08:26:49.614189 #2661] ERROR -- default-rhel-7: ----------------------
+E, [2019-06-30T08:26:49.614198 #2661] ERROR -- default-rhel-7: ------Backtrace-------
+E, [2019-06-30T08:26:49.614207 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/shell_out.rb:71:in `rescue in run_command'
+E, [2019-06-30T08:26:49.614215 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/shell_out.rb:58:in `run_command'
+E, [2019-06-30T08:26:49.614223 #2661] ERROR -- default-rhel-7: /root/.chefdk/gem/ruby/2.6.0/gems/kitchen-docker-2.9.0/lib/kitchen/driver/docker.rb:163:in `docker_command'
+E, [2019-06-30T08:26:49.614231 #2661] ERROR -- default-rhel-7: /root/.chefdk/gem/ruby/2.6.0/gems/kitchen-docker-2.9.0/lib/kitchen/driver/docker.rb:330:in `build_image'
+E, [2019-06-30T08:26:49.614239 #2661] ERROR -- default-rhel-7: /root/.chefdk/gem/ruby/2.6.0/gems/kitchen-docker-2.9.0/lib/kitchen/driver/docker.rb:122:in `create'
+E, [2019-06-30T08:26:49.614284 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/instance.rb:485:in `public_send'
+E, [2019-06-30T08:26:49.614299 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/instance.rb:485:in `block in perform_action'
+E, [2019-06-30T08:26:49.614313 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/instance.rb:552:in `synchronize_or_call'
+E, [2019-06-30T08:26:49.614322 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/instance.rb:514:in `block in action'
+E, [2019-06-30T08:26:49.614331 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/2.6.0/benchmark.rb:293:in `measure'
+E, [2019-06-30T08:26:49.614342 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/instance.rb:513:in `action'
+E, [2019-06-30T08:26:49.614351 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/instance.rb:485:in `perform_action'
+E, [2019-06-30T08:26:49.614360 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/instance.rb:394:in `create_action'
+E, [2019-06-30T08:26:49.614380 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/instance.rb:382:in `block (2 levels) in transition_to'
+E, [2019-06-30T08:26:49.614390 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/lifecycle_hooks.rb:45:in `run_with_hooks'
+E, [2019-06-30T08:26:49.614398 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/instance.rb:381:in `block in transition_to'
+E, [2019-06-30T08:26:49.614408 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/instance.rb:380:in `each'
+E, [2019-06-30T08:26:49.614419 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/instance.rb:380:in `transition_to'
+E, [2019-06-30T08:26:49.614428 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/instance.rb:162:in `verify'
+E, [2019-06-30T08:26:49.614436 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/instance.rb:191:in `block in test'
+E, [2019-06-30T08:26:49.614444 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/2.6.0/benchmark.rb:293:in `measure'
+E, [2019-06-30T08:26:49.614452 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/instance.rb:187:in `test'
+E, [2019-06-30T08:26:49.614460 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/command.rb:197:in `public_send'
+E, [2019-06-30T08:26:49.614470 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/command.rb:197:in `run_action_in_thread'
+E, [2019-06-30T08:26:49.614478 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2019-06-30T08:26:49.614486 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/logging-2.2.2/lib/logging/diagnostic_context.rb:474:in `block in create_with_logging_context'
+E, [2019-06-30T08:26:49.614499 #2661] ERROR -- default-rhel-7: ----End Backtrace-----
+E, [2019-06-30T08:26:49.614507 #2661] ERROR -- default-rhel-7: ---Nested Exception---
+E, [2019-06-30T08:26:49.614515 #2661] ERROR -- default-rhel-7: Class: Mixlib::ShellOut::ShellCommandFailed
+E, [2019-06-30T08:26:49.614523 #2661] ERROR -- default-rhel-7: Message: Expected process to exit with [0], but received '1'
+---- Begin output of docker -H unix:///var/run/docker.sock build -f Dockerfile-kitchen20190630-2661-xfpotz . ----
+STDOUT: Sending build context to Docker daemon  101.9kB
+Step 1/18 : FROM rhel:7
+STDERR: pull access denied for rhel, repository does not exist or may require 'docker login'
+---- End output of docker -H unix:///var/run/docker.sock build -f Dockerfile-kitchen20190630-2661-xfpotz . ----
+Ran docker -H unix:///var/run/docker.sock build -f Dockerfile-kitchen20190630-2661-xfpotz . returned 1
+E, [2019-06-30T08:26:49.614531 #2661] ERROR -- default-rhel-7: ----------------------
+E, [2019-06-30T08:26:49.614539 #2661] ERROR -- default-rhel-7: ------Backtrace-------
+E, [2019-06-30T08:26:49.614547 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/shell_out.rb:71:in `rescue in run_command'
+E, [2019-06-30T08:26:49.614555 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/shell_out.rb:58:in `run_command'
+E, [2019-06-30T08:26:49.614563 #2661] ERROR -- default-rhel-7: /root/.chefdk/gem/ruby/2.6.0/gems/kitchen-docker-2.9.0/lib/kitchen/driver/docker.rb:163:in `docker_command'
+E, [2019-06-30T08:26:49.614575 #2661] ERROR -- default-rhel-7: /root/.chefdk/gem/ruby/2.6.0/gems/kitchen-docker-2.9.0/lib/kitchen/driver/docker.rb:330:in `build_image'
+E, [2019-06-30T08:26:49.614587 #2661] ERROR -- default-rhel-7: /root/.chefdk/gem/ruby/2.6.0/gems/kitchen-docker-2.9.0/lib/kitchen/driver/docker.rb:122:in `create'
+E, [2019-06-30T08:26:49.614597 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/instance.rb:485:in `public_send'
+E, [2019-06-30T08:26:49.614605 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/instance.rb:485:in `block in perform_action'
+E, [2019-06-30T08:26:49.614614 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/instance.rb:552:in `synchronize_or_call'
+E, [2019-06-30T08:26:49.614623 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/instance.rb:514:in `block in action'
+E, [2019-06-30T08:26:49.614631 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/2.6.0/benchmark.rb:293:in `measure'
+E, [2019-06-30T08:26:49.614639 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/instance.rb:513:in `action'
+E, [2019-06-30T08:26:49.614647 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/instance.rb:485:in `perform_action'
+E, [2019-06-30T08:26:49.614655 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/instance.rb:394:in `create_action'
+E, [2019-06-30T08:26:49.614667 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/instance.rb:382:in `block (2 levels) in transition_to'
+E, [2019-06-30T08:26:49.614676 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/lifecycle_hooks.rb:45:in `run_with_hooks'
+E, [2019-06-30T08:26:49.614684 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/instance.rb:381:in `block in transition_to'
+E, [2019-06-30T08:26:49.614692 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/instance.rb:380:in `each'
+E, [2019-06-30T08:26:49.614701 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/instance.rb:380:in `transition_to'
+E, [2019-06-30T08:26:49.614709 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/instance.rb:162:in `verify'
+E, [2019-06-30T08:26:49.614717 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/instance.rb:191:in `block in test'
+E, [2019-06-30T08:26:49.614724 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/2.6.0/benchmark.rb:293:in `measure'
+E, [2019-06-30T08:26:49.614733 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/instance.rb:187:in `test'
+E, [2019-06-30T08:26:49.614744 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/command.rb:197:in `public_send'
+E, [2019-06-30T08:26:49.614753 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/command.rb:197:in `run_action_in_thread'
+E, [2019-06-30T08:26:49.614761 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/test-kitchen-2.2.5/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2019-06-30T08:26:49.614769 #2661] ERROR -- default-rhel-7: /opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/logging-2.2.2/lib/logging/diagnostic_context.rb:474:in `block in create_with_logging_context'
+E, [2019-06-30T08:26:49.614777 #2661] ERROR -- default-rhel-7: ----End Backtrace-----
