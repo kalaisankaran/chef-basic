@@ -15,6 +15,15 @@ describe 'apache::default' do
     it 'converges successfully' do
       expect { chef_run }.to_not raise_error
     end
+    it 'install apache' do
+        expect(chef_run).to install_package('apache2')
+    end
+    it 'starts the apache' do
+        expect(chef_run).to start_service('apache2')
+    end
+    it 'enables the apache service' do
+        expect(chef_run).to enable_service('apache2')
+    end
   end
 
   context 'When all attributes are default, on CentOS 7' do
@@ -24,6 +33,15 @@ describe 'apache::default' do
 
     it 'converges successfully' do
       expect { chef_run }.to_not raise_error
+    end
+    it 'install apache' do
+	expect(chef_run).to install_package('apache2')
+    end
+    it 'starts the apache' do 
+	expect(chef_run).to start_service('apache2')
+    end
+    it 'enables the apache service' do
+	expect(chef_run).to enable_service('apache2')
     end
   end
 end

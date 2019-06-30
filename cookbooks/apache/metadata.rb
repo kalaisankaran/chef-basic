@@ -1,6 +1,6 @@
 name 'apache'
 maintainer 'shankar'
-maintainer_email 'you@example.com'
+maintainer_email 'shankar@example.com'
 license 'All Rights Reserved'
 description 'Installs/Configures apache'
 long_description 'Installs/Configures apache'
@@ -18,3 +18,13 @@ chef_version '>= 14.0'
 # a Supermarket.
 #
 # source_url 'https://github.com/<insert_org_here>/apache'
+
+
+supports 'centos'
+supports 'fedora'
+supports 'redhat'
+
+github_url = "https://github.com/trovsankar/chef-basic/tree/master/cookbooks/apache"
+
+source_url github_url
+issues_url "#{github_url}/issues"

@@ -1,0 +1,51 @@
+{
+  "revision_id": "0956851d1040800faec57140be6639c1fee8728e567bd11490810f46341f42d1",
+  "name": "apache",
+  "run_list": [
+    "recipe[apache::default]"
+  ],
+  "included_policy_locks": [
+
+  ],
+  "cookbook_locks": {
+    "apache": {
+      "version": "2.0.1",
+      "identifier": "9bbdfe74d8ad73978458b37e2d158f328ed3fb84",
+      "dotted_decimal_identifier": "43837521969851763.42648237986688277.157447307393924",
+      "source": ".",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "https://github.com/trovsankar/chef-basic.git",
+        "revision": "b214f2135751fc380ffb7babdaf4188f78254ade",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "."
+      }
+    }
+  },
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "apache",
+        ">= 0.0.0"
+      ]
+    ],
+    "dependencies": {
+      "apache (2.0.1)": [
+
+      ]
+    }
+  }
+}
